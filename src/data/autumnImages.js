@@ -25,91 +25,91 @@ const autumnImages = [
       "id": "img1",
       "url": "src/assets/moodBoardImages/img1.jpg",
       "alt": "An autumn landscape photo with mountains and a small forest.",
-      "moods": ["Nature", "Outdoor", "Peaceful"]
+      "moods": ["nature", "peaceful", "outdoor"]
     },
     {
       "id": "img2",
       "url": "src/assets/moodBoardImages/img2.jpg",
       "alt": "A drawing of a dog wearing a ghost costume and holding a bucket to collect treats.",
-      "moods": ["Halloween", "Festive", "Cozy"]
+      "moods": ["halloween", "festive", "cozy"]
     },
     {
       "id": "img3",
       "url": "src/assets/moodBoardImages/img3.jpg",
       "alt": "Autumn forest landscape with a horse.",
-      "moods": ["Nature", "Peaceful", "Outdoor"]
+      "moods": ["nature", "peaceful", "outdoor"]
     },
     {
       "id": "img4",
       "url": "src/assets/moodBoardImages/img4.jpg",
       "alt": "Drawing of a cute ghost behind plants.",
-      "moods": ["Halloween", "Cozy", "Festive"]
+      "moods": ["halloween", "cozy", "festive"]
     },
     {
       "id": "img5",
       "url": "src/assets/moodBoardImages/img5.jpg",
       "alt": "Three Jack-O-Lanterns.",
-      "moods": ["Cozy", "Warm", "Halloween"]
+      "moods": ["cozy", "warm", "halloween"]
     },
     {
       "id": "img6",
       "url": "src/assets/moodBoardImages/img6.jpg",
       "alt": "Picture of a lit candle at night.",
-      "moods": ["Cozy", "Warm", "Indoor"]
+      "moods": ["cozy", "warm", "festive"]
     },
     {
       "id": "img7",
       "url": "src/assets/moodBoardImages/img7.jpg",
       "alt": "An orange cup that has Morning Pumpkin written on it.",
-      "moods": ["Cozy", "Warm", "Halloween"]
+      "moods": ["cozy", "warm", "halloween"]
     },
     {
       "id": "img8",
       "url": "src/assets/moodBoardImages/img8.jpg",
       "alt": "A rainy road with trees on both sides during a rainy autumn day.",
-      "moods": ["Rainy", "Nature", "Outdoor"]
+      "moods": ["rainy", "nature", "outdoor"]
     },
     {
       "id": "img9",
       "url": "src/assets/moodBoardImages/img9.jpg",
       "alt": "A close picture of a chestnut.",
-      "moods": ["Cozy", "Nature", "Outdoor"]
+      "moods": ["cozy", "nature", "outdoor"]
     },
     {
       "id": "img10",
       "url": "src/assets/moodBoardImages/img10.jpg",
       "alt": "A patch of rustic pumpkins.",
-      "moods": ["Nature", "Warm", "Outdoor"]
+      "moods": ["nature", "warm", "outdoor"]
     },
     {
       "id": "img11",
       "url": "src/assets/moodBoardImages/img11.jpg",
       "alt": "Multiple pumpkins on fallen leaves outside.",
-      "moods": ["Nature", "Warm", "Outdoor"]
+      "moods": ["nature", "warm", "outdoor"]
     },
     {
       "id": "img12",
       "url": "src/assets/moodBoardImages/img12.jpg",
       "alt": "A picture of autum related items, pumpkin pillows, pumpkin shaped cookies and a book.",
-      "moods": ["Cozy", "Warm", "Indoor"]
+      "moods": ["cozy", "warm", "festive"]
     },
     {
       "id": "img13",
       "url": "src/assets/moodBoardImages/img13.jpg",
       "alt": "Two golden retrievers sitting in a park during autumn.",
-      "moods": ["Nature", "Warm", "Outdoor"]
+      "moods": ["nature", "warm", "outdoor"]
     },
      {
       "id": "img14",
       "url": "src/assets/moodBoardImages/img14.jpg",
       "alt": "Autumn leaves",
-      "moods": ["Nature", "Warm", "Outdoor"]
+      "moods": ["nature", "warm", "outdoor"]
     },
     {
       "id": "img15",
       "url": "src/assets/moodBoardImages/img15.png",
       "alt": "A Halloween-style drawing of a cat stirring potion in a cauldron.",
-      "moods": ["Halloween", "Cozy", "Festive"]
+      "moods": ["halloween", "cozy", "festive"]
     },
   ]
 

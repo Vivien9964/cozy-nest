@@ -1,9 +1,9 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
-import MoodBoard from './pages/MoodBoard'
-import FallRecipes from './pages/FallRecipes'
-import AutumnPlanner from './pages/AutumnPlanner'
-import AutumnCountDown from './pages/AutumnCountDown'
+import MoodBoard from './pages/MoodBoard/MoodBoard'
+import FallRecipes from './pages/FallRecipes/FallRecipes'
+import AutumnPlanner from './pages/AutumnPlanner/AutumnPlanner'
+import AutumnCountDown from './pages/AutumnEvents/AutumnCountDown'
 import Navbar from './components/Navbar'
 
 
