@@ -1,8 +1,21 @@
 import React from 'react'
+import AddTask from '../../components/autumnPlannerComponents/AddTask'
+import TaskList from '../../components/autumnPlannerComponents/TaskList'
+
 
 const AutumnPlanner = () => {
+
+
+
   return (
-    <div>AutumnPlanner</div>
+    <div>
+
+      <AddTask />
+
+      <TaskList />
+
+
+    </div>
   )
 }
 
