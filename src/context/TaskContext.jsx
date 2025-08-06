@@ -36,16 +36,19 @@ const TaskProvider = ({ children }) => {
         setTasks(updatedTasks);
     }
 
+
+    const deleteCompleted = () => {
+        const updatedTasks = tasks.filter((task) => task.completed === false);
+        setTasks(updatedTasks);
+    }
+
     
-
-
-
-
     const contextValue = {
         tasks,
         addTask,
         deleteTask, 
-        toggleComplete, 
+        toggleComplete,
+        deleteCompleted,
     }
 
 
