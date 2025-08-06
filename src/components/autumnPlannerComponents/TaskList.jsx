@@ -1,35 +1,26 @@
-import React, { useContext } from 'react'
-import { TasksContext } from '../../context/TaskContext'
+import React, { useContext } from "react";
+import { TasksContext } from "../../context/TaskContext";
+import TaskItem from "./TaskItem";
 
 const TaskList = () => {
-
-  const { tasks, deleteTask, toggleComplete, sortTasks } = useContext(TasksContext);
-
+  const { tasks } = useContext(TasksContext);
 
   return (
     <div>
-
-      <ul style={{ listStyle: "none"}}>
-      {tasks.map((task) => {
-        return <li key={task.id}>
-          <h3>{task.todo}</h3>
-          <p>{task.date}</p>
-          <input 
-            type="checkbox"
-            checked={task.completed}
-            onChange={() => toggleComplete(task.id)} 
-          />
-          <button onClick={() => deleteTask(task.id)}>Delete</button>
-        </li>
-      })}
-      </ul>
-
-      
-
-
-
+      {tasks.length === 0 ? (
+        <p>No tasks yet!</p>
+      ) : (
+        <div>
+          <h1>Your Bucket List</h1>
+          <ul style={{ listStyle: "none" }}>
+            {tasks.map((task) => {
+              return <TaskItem key={task.id} task={task} />;
+            })}
+          </ul>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default TaskList
+export default TaskList;

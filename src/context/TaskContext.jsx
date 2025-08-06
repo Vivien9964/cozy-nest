@@ -1,11 +1,22 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const TasksContext = createContext();
 
 
 const TaskProvider = ({ children }) => {
 
-    const [ tasks, setTasks ] = useState([]);
+
+    // Lazy initialization of state from localStorage 
+    // -> initial state is read from localStorage once when the component mounts
+    const [ tasks, setTasks ] = useState(() => {
+        const storedTasks = localStorage.getItem("autumn_tasks");
+        return storedTasks ? JSON.parse(storedTasks) : [];
+    });
+
+    // Load tasks from localStorage
+    useEffect(() => {
+        localStorage.setItem("autumn_tasks", JSON.stringify(tasks))
+    }, [tasks]);
 
     const addTask = (task) => {
         setTasks([...tasks, task]);
@@ -24,6 +35,8 @@ const TaskProvider = ({ children }) => {
         
         setTasks(updatedTasks);
     }
+
+    
 
 
 
