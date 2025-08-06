@@ -1,0 +1,32 @@
+
+.imageGrid {
+    columns: 4;
+    column-gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  @media (max-width: 1200px) {
+    .imageGrid {
+      columns: 3;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .imageGrid {
+      columns: 2;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .imageGrid {
+      columns: 1;
+    }
+  }
+  
+  .imageItem {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    list-style: none;
+  }
+  
+ 

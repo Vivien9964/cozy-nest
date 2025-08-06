@@ -1,23 +1,28 @@
-import React from 'react'
-import ImageCard from './ImageCard'
+import React from "react";
+import ImageCard from "./ImageCard";
+import styles from "./ImageGrid.module.css";
 
-const ImageGrid = ({ images }) => {
+// Note: Always make sure when you use map to add a unique key to each item!!
 
+const ImageGrid = ({ images, onImageClick }) => {
   return (
-    <div>
+    <ul className={styles.imageGrid}>
+      {images.map((image) => {
+        return (
+          <li key={image.id} className={styles.imageItem}>
+            <ImageCard
+              key={image.id}
+              imageID={image.id}
+              imageUrl={image.url}
+              altText={image.alt}
+              mood={image.moods}
+              onClick={() => onImageClick(image)}
+            />
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
-        {images.map((image) => {
-            return <ImageCard 
-                        key={image.id} 
-                        imageID={image.id} 
-                        imageUrl={image.url} 
-                        altText={image.alt} 
-                        mood={image.moods}
-                    />
-        })}
-
-    </div>
-  )
-}
-
-export default ImageGrid
+export default ImageGrid;

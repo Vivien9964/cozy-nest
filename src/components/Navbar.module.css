@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+.navbarContainer {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(135deg, 
+    rgba(139, 90, 60, 0.15) 0%, 
+    rgba(160, 129, 108, 0.12) 50%, 
+    rgba(180, 149, 128, 0.1) 100%);
+  border-bottom: 2px solid rgba(139, 90, 60, 0.2);
+  box-shadow: 
+    0 4px 20px rgba(139, 90, 60, 0.08),
+    0 1px 3px rgba(160, 129, 108, 0.1);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .navList {
+    gap: 1.5rem;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 480px) {
+  .navList {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navbarContainer {
+    position: relative;
+  }
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #8b5a3c;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(139, 90, 60, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+
+.navLink::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #cd853f, #d2b48c, #deb887);
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+
+.navLink:hover {
+  color: #6d4428;
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(139, 90, 60, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(139, 90, 60, 0.12),
+    0 4px 12px rgba(160, 129, 108, 0.08);
+}
+
+.navLink:hover::before {
+  width: 80%;
+}
+
+.navLink:hover::after {
+  opacity: 1;
+  transform: rotate(15deg) scale(1);
+  animation: leafFloat 2s ease-in-out infinite;
+}
+
+.navLink.active {
+  background: rgba(139, 90, 60, 0.15);
+  color: #6d4428;
+  border-color: rgba(139, 90, 60, 0.3);
+  font-weight: 600;
+}
+
+.navLink:hover {
+  animation: autumnSparkle 0.6s ease-out;
+}
+
+@keyframes autumnSparkle {
+  0% {
+    box-shadow: 
+      0 8px 25px rgba(139, 90, 60, 0.12),
+      0 4px 12px rgba(160, 129, 108, 0.08);
+  }
+  50% {
+    box-shadow: 
+      0 8px 25px rgba(139, 90, 60, 0.2),
+      0 4px 12px rgba(160, 129, 108, 0.15),
+      0 0 20px rgba(205, 133, 63, 0.1);
+  }
+  100% {
+    box-shadow: 
+      0 8px 25px rgba(139, 90, 60, 0.12),
+      0 4px 12px rgba(160, 129, 108, 0.08);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navLink {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navLink {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
