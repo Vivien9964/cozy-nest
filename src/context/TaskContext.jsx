@@ -20,12 +20,12 @@ const TaskProvider = ({ children }) => {
 
     const addTask = (task) => {
         setTasks([...tasks, task]);
-    }
+    };
 
     const deleteTask = (id) => {
         const updatedTasks = tasks.filter((task) => task.id !== id);
         setTasks(updatedTasks);
-    }
+    };
 
     const toggleComplete = (id) => {
 
@@ -34,13 +34,20 @@ const TaskProvider = ({ children }) => {
         );
         
         setTasks(updatedTasks);
-    }
+    };
 
 
     const deleteCompleted = () => {
         const updatedTasks = tasks.filter((task) => task.completed === false);
         setTasks(updatedTasks);
-    }
+    };
+
+
+    const editTask = (id, updatedTask) => {
+        setTasks(tasks.map((task) => 
+            task.id === id ? { ...task, ...updatedTask } : task
+        ));
+    };
 
     
     const contextValue = {
@@ -49,6 +56,7 @@ const TaskProvider = ({ children }) => {
         deleteTask, 
         toggleComplete,
         deleteCompleted,
+        editTask,
     }
 
 
