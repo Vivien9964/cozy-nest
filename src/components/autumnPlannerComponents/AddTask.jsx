@@ -24,7 +24,7 @@ const AddTask = () => {
     addTask(newTodo);
     setTask('');
     setNotes('');
-    setPriority('');
+    setPriority('low');
   }
 
   return (
