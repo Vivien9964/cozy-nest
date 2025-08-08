@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Kalam:wght@300;400;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+.plannerContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    #faf7f2 0%, 
+    #f5f0e8 25%, 
+    #f0e9dc 50%, 
+    #ebe2d0 75%, 
+    #e6dbc4 100%);
+  font-family: 'Crimson Text', serif;
+}
+
+.plannerContainer::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(205, 133, 63, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 40% 80%, rgba(222, 184, 135, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+}

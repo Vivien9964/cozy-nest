@@ -1,0 +1,105 @@
+/* TaskList.module.css */
+.taskListContainer {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 
+      0 12px 40px rgba(139, 90, 60, 0.08),
+      0 6px 20px rgba(160, 129, 108, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    position: relative;
+  }
+  
+  .emptyState {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: rgba(139, 90, 60, 0.7);
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  .emptyState::before {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+  
+  .bucketListTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #8b5a3c;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .controlsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .clearButton {
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, #823a14b8 0%, #574226b7 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Kalam', cursive;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(205, 92, 92, 0.2);
+  }
+  
+  .clearButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(205, 92, 92, 0.3);
+  }
+  
+  .filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .filterLabel {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    color: #8b5a3c;
+    font-size: 0.95rem;
+  }
+  
+  .filterSelect {
+    padding: 0.6rem 1rem;
+    border: 2px solid rgba(139, 90, 60, 0.15);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #8b5a3c;
+    font-family: 'Crimson Text', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filterSelect:focus {
+    outline: none;
+    border-color: #cd853f;
+    box-shadow: 0 0 0 3px rgba(205, 133, 63, 0.1);
+  }
+  
+  .tasksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  

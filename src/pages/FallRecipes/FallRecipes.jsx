@@ -1,8 +1,12 @@
 import React from 'react'
+import RecipeList from '../../components/fallRecipesComponents/RecipeList'
 
 const FallRecipes = () => {
   return (
-    <div>FallRecipes</div>
+    
+    <div>
+      <RecipeList />
+    </div>
   )
 }
 

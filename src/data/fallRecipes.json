@@ -1,0 +1,30 @@
+[
+    {
+      "id": "1",
+      "title": "Pumpkin Spice Latte",
+      "image": "/images/pumpkin-spice-latte.jpg",
+      "ingredients": ["pumpkin puree", "espresso", "milk", "cinnamon", "nutmeg"],
+      "instructions": "Mix ingredients, heat, and serve.",
+      "type": "drink",
+      "prepTime": 10
+    },
+    {
+      "id": "2",
+      "title": "Butternut Squash Soup",
+      "image": "/images/butternut-squash-soup.jpg",
+      "ingredients": ["butternut squash", "onion", "garlic", "vegetable broth"],
+      "instructions": "Roast squash, blend with other ingredients, and simmer.",
+      "type": "soup",
+      "prepTime": 40
+    },
+    {
+      "id": "3",
+      "title": "Apple Cinnamon Muffins",
+      "image": "/images/apple-muffins.jpg",
+      "ingredients": ["apples", "flour", "eggs", "cinnamon", "sugar"],
+      "instructions": "Mix ingredients, bake at 180°C for 20 minutes.",
+      "type": "dessert",
+      "prepTime": 30
+    }
+  ]
+  

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { TasksContext } from '../../context/TaskContext'
+import styles from './AddTask.module.css';
 
 
 const AddTask = () => {
@@ -28,32 +29,50 @@ const AddTask = () => {
   }
 
   return (
-    <div>
-    <form action="submit" onSubmit={handleSubmit}>
-      <input 
-        type="text"
-        placeholder='Add your cozy activity here...'
-        value={task}
-        onChange={(e) => setTask(e.target.value)} 
-      />
+    <main className={styles.addTaskContainer}>
 
-      <input 
-        type="text" 
-        placeholder='Add a note...'
-        value={note}
-        onChange={(e) => setNotes(e.target.value)}
-      />
+      <h2 className={styles.formTitle}>Add New Activity</h2>
 
-      <label>Select priority:</label>
-      <select onChange={(e) => setPriority(e.target.value)} value={priority}>
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-        <option value="low">Low</option>
-      </select>
+    <form className={styles.addTaskForm} onSubmit={handleSubmit}>
 
-      <button type="submit">Add</button>
+      <div className={styles.inputGroup}>
+        <input 
+          type="text"
+          className={styles.taskInput}
+          placeholder='Add your cozy activity here...'
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          required 
+        />
+      </div>
+
+      <div className={styles.inputGroup}>
+        <input 
+          type="text" 
+          className={styles.noteInput}
+          placeholder='Add a note...'
+          value={note}
+          onChange={(e) => setNotes(e.target.value)}
+        />
+      </div>
+
+
+      <div className={styles.priorityGroup}>
+        <label className={styles.priorityLabel}>Select priority:</label>
+        <select 
+          className={styles.prioritySelect}
+          onChange={(e) => setPriority(e.target.value)} 
+          value={priority}
+        >
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+
+      <button className={styles.submitButton} type="submit">Add to Bucket List</button>
     </form>
-    </div>
+    </main>
   )
 }
 
