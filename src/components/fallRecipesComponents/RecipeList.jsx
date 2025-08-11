@@ -4,8 +4,10 @@ import RecipeCard from './RecipeCard';
 
 const RecipeList = () => {
 
+  // State  for recipes
   const [recipes, setRecipes] = useState([]);
 
+  // Load recipes from separate json file
   useEffect(() => {
     setRecipes(recipesData);
   }, [])

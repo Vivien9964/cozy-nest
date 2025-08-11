@@ -2,7 +2,7 @@
     {
       "id": "1",
       "title": "Pumpkin Spice Latte",
-      "image": "/images/pumpkin-spice-latte.jpg",
+      "image": "/assets/fallRecipesImages/recipeImages/pumpkinSpice.jpg",
       "ingredients": ["pumpkin puree", "espresso", "milk", "cinnamon", "nutmeg"],
       "instructions": "Mix ingredients, heat, and serve.",
       "type": "drink",
@@ -11,7 +11,7 @@
     {
       "id": "2",
       "title": "Butternut Squash Soup",
-      "image": "/images/butternut-squash-soup.jpg",
+      "image": "/assets/fallRecipesImages/recipeImages/butterSquash.jpg",
       "ingredients": ["butternut squash", "onion", "garlic", "vegetable broth"],
       "instructions": "Roast squash, blend with other ingredients, and simmer.",
       "type": "soup",
@@ -20,11 +20,75 @@
     {
       "id": "3",
       "title": "Apple Cinnamon Muffins",
-      "image": "/images/apple-muffins.jpg",
+      "image": "/assets/fallRecipesImages/recipeImages/appleMuffin.jpg",
       "ingredients": ["apples", "flour", "eggs", "cinnamon", "sugar"],
       "instructions": "Mix ingredients, bake at 180°C for 20 minutes.",
       "type": "dessert",
       "prepTime": 30
+    },
+    {
+      "id": "4",
+      "title": "Creamy Mushroom Risotto",
+      "image": "/assets/fallRecipesImages/recipeImages/mushroomRisotto.jpg",
+      "ingredients": ["arborio rice", "mushrooms", "onion", "parmesan cheese", "vegetable broth", "butter"],
+      "instructions": "Sauté onions and mushrooms, add rice, gradually stir in broth until creamy, finish with parmesan and butter.",
+      "type": "main",
+      "prepTime": 45
+    },
+    {
+      "id": "5",
+      "title": "Caramel Apple Cider",
+      "image": "/assets/fallRecipesImages/recipeImages/appleCider.jpg",
+      "ingredients": ["apple cider", "caramel sauce", "cinnamon", "whipped cream"],
+      "instructions": "Heat cider with caramel and cinnamon, serve with whipped cream on top.",
+      "type": "drink",
+      "prepTime": 10
+    },
+    {
+      "id": "6",
+      "title": "Maple Glazed Carrots",
+      "image": "/assets/fallRecipesImages/recipeImages/roastedCarrot.jpg",
+      "ingredients": ["carrots", "maple syrup", "butter", "salt", "pepper"],
+      "instructions": "Roast carrots with butter, drizzle with maple syrup before serving.",
+      "type": "side",
+      "prepTime": 25
+    },
+    {
+      "id": "7",
+      "title": "Sweet Potato Pie",
+      "image": "/assets/fallRecipesImages/recipeImages/potatoPie.jpg",
+      "ingredients": ["sweet potatoes", "flour", "butter", "eggs", "cinnamon", "nutmeg", "sugar"],
+      "instructions": "Mash cooked sweet potatoes, mix with other ingredients, bake in pie crust until set.",
+      "type": "dessert",
+      "prepTime": 60
+    },
+    {
+      "id": "8",
+      "title": "Roasted Pumpkin Salad",
+      "image": "/assets/fallRecipesImages/recipeImages/pumpkinSalad.jpg",
+      "ingredients": ["pumpkin", "mixed greens", "goat cheese", "walnuts", "cranberries", "olive oil"],
+      "instructions": "Roast pumpkin cubes, toss with greens, cheese, nuts, and cranberries, drizzle with olive oil.",
+      "type": "salad",
+      "prepTime": 30
+    },
+    {
+      "id": "9",
+      "title": "Mulled Wine",
+      "image": "/assets/fallRecipesImages/recipeImages/mulledWine.jpg",
+      "ingredients": ["red wine", "orange slices", "cinnamon sticks", "cloves", "honey"],
+      "instructions": "Simmer all ingredients gently without boiling, serve warm.",
+      "type": "drink",
+      "prepTime": 15
+    },
+    {
+      "id": "10",
+      "title": "Pumpkin Bread",
+      "image": "/assets/fallRecipesImages/recipeImages/pumpkinBread.jpg",
+      "ingredients": ["pumpkin puree", "flour", "eggs", "cinnamon", "nutmeg", "sugar", "baking soda"],
+      "instructions": "Mix ingredients, pour into loaf pan, bake at 175°C for 50 minutes.",
+      "type": "dessert",
+      "prepTime": 65
     }
+    
   ]
   

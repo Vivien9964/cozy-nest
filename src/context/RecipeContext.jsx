@@ -1,18 +1,33 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 export const RecipeContext = createContext(); 
 
-const RecipeProvider = () => {
+const RecipeProvider = ({ children }) => {
 
+  // State for favorite recipes
+  // Check if there are favorite recipes in localStorage, if so, then return favorite recipes, else an empty array
+  const [favorites, setFavorites] = useState(() => {
+    const stored = localStorage.getItem("favorites");
+    return stored ? JSON.parse(stored) : [];
+  })
 
-  const [favorites, setFavorites] = useState([]);
+  // Function to add / remove recipe from favorites
+  const toggleFavorites = (id) => {
+    setFavorites((prev) => 
+      prev.includes(id) ? prev.filter((favId) => favId !== id) : [...prev, id]
+    );
 
+  }
 
+  // Save favorites into localStorage whenever the array changes
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites))
+  }, [favorites]);
 
-
-
+  
   const contextValue = {
     favorites,
+    toggleFavorites
   }
 
   return (

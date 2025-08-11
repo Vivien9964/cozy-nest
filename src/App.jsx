@@ -8,7 +8,7 @@ import AutumnPlanner from './pages/AutumnPlanner/AutumnPlanner'
 import AutumnCountDown from './pages/AutumnEvents/AutumnCountDown'
 import Navbar from './components/Navbar'
 import TaskProvider from './context/TaskContext'
-
+import RecipeProvider from './context/RecipeContext'
 
 
 
@@ -17,6 +17,7 @@ function App() {
   return (
     <>
 
+      <RecipeProvider>
       <TaskProvider>
         <Router>
           <Navbar />
@@ -31,6 +32,7 @@ function App() {
           </Routes>
         </Router>
       </TaskProvider>
+      </RecipeProvider>
      
     </>
   )
