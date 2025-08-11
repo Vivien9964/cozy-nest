@@ -16,6 +16,11 @@ const Favorites = () => {
   return (
     <div>
       <h2>Your Favorite Recipes</h2>
+
+      <button>
+        <Link to={"/recipes"}>Back to Recipes</Link>
+      </button>
+      
       <ul>
         {favoriteRecipes.map((recipe) => (
           <li key={recipe.id}>
@@ -26,9 +31,6 @@ const Favorites = () => {
         ))}
       </ul>
 
-      <button>
-        <Link to={"/recipes"}>Back to Recipes</Link>
-      </button>
     </div>
   );
 };

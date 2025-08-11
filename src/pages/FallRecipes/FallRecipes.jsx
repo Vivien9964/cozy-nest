@@ -7,9 +7,10 @@ const FallRecipes = () => {
     
     <div>
 
-    <RecipeList />
-
       <button><Link to={'/favorites'}>See Favorites</Link></button>
+
+      <RecipeList />
+
 
     </div>
   )
