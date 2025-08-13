@@ -63,7 +63,7 @@ Concepts practiced:
 
 Improvements in the future: 
 
-- Connect the app to an API to fetch images from there. 
+- Connect the app to an API to fetch images. 
 - Enable user uploads.
 - Add like functionality.
 
@@ -73,6 +73,7 @@ Improvements in the future:
 A collection of fall recipes that you can try, and add to favorites later if you like!
 
 Concepts practiced: 
+
 - State management with useState
 - Global state sharing with Context API
 - Data handling from local JSON file
@@ -92,7 +93,8 @@ Improvements in the future:
 ### 4. Autumn CountDown
 A countdown timer tracking days until your chosen fall event.
 
-Concepts practiced: 
+Concepts practiced:
+
 - State management with useState
 - Saving to localStorage
 - Creating a custom countdown calculation function
@@ -102,12 +104,14 @@ Concepts practiced:
 ## Technologies:
 - React (Vite)
 - JavaScript (ES6+)
-- CSS modlues
+- CSS modules
 
 ## Credits:
 Created by Vivien - Inspired by autumn
 
 ## Contact:
-Feel free to reach out via mecserikvivien2@gmail.com
+Feel free to reach out: 
+    Email: mecserikvivien2@gmail.com
+    LinkedIn: https://www.linkedin.com/in/vivien-mecerik-1260171b1/
 
 
