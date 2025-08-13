@@ -26,6 +26,14 @@ each created as a way to apply and improve my React skills.
 
 5. Open the local URL provided in your terminal.
 
+---
+
+## Technologies:
+- React (Vite)
+- JavaScript (ES6+)
+- CSS modules
+
+---
 
 ## Projects Overview
 
@@ -101,17 +109,6 @@ Concepts practiced:
 - Working with Date object
 - Conditional rendering
 
-## Technologies:
-- React (Vite)
-- JavaScript (ES6+)
-- CSS modules
 
-## Credits:
-Created by Vivien - Inspired by autumn
-
-## Contact:
-Feel free to reach out: 
-    Email: mecserikvivien2@gmail.com
-    LinkedIn: https://www.linkedin.com/in/vivien-mecerik-1260171b1/
 
 
