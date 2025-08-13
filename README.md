@@ -32,7 +32,7 @@ each created as a way to apply and improve my React skills.
 ### 1. Autumn Bucket List - Tod-do List
 A simple to-do list to help you track your fall activities.
 
-Concepts practices:
+Concepts practiced:
 
 - State management with useState
 - Global state sharing with Context API
