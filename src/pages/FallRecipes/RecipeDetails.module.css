@@ -1,0 +1,161 @@
+.recipeDetailsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--white-overlay);
+    border-radius: 25px;
+    box-shadow:
+      0 12px 40px rgba(139, 90, 60, 0.08),
+      0 6px 20px rgba(160, 129, 108, 0.05);
+    border: 1px solid var(--white-border);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .recipeDetailsContainer::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg,
+      var(--cream-light), var(--cream-medium), var(--cream-dark), var(--nude-light),
+      var(--nude-medium), var(--nude-dark), var(--brown-medium), var(--brown-dark));
+    border-radius: 27px;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  
+  .detailsTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--warm-brown);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .detailsImageWrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .detailsImage {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(139, 90, 60, 0.15);
+  }
+  
+  .detailsPrepTime {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1rem;
+    color: var(--warm-brown);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  
+  .sectionTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--warm-brown);
+    margin: 2rem 0 1rem 0;
+    border-bottom: 2px solid rgba(139, 90, 60, 0.2);
+    padding-bottom: 0.5rem;
+  }
+  
+  .ingredientsList {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: inset 0 2px 4px rgba(139, 90, 60, 0.05);
+  }
+  
+  .ingredientItem {
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
+    color: var(--warm-brown);
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  
+
+  
+  .instructions {
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
+    color: var(--warm-brown);
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .detailsActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(139, 90, 60, 0.1);
+  }
+  
+  .backLink {
+    font-family: 'Kalam', cursive;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, var(--golden-brown) 0%, var(--nude-medium) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(205, 133, 63, 0.2);
+  }
+  
+  .backLink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(205, 133, 63, 0.3);
+  }
+  
+  .detailsFavoriteButton {
+    background: rgba(139, 90, 60, 0.1);
+    border: 1px solid rgba(139, 90, 60, 0.2);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .detailsFavoriteButton:hover {
+    background: rgba(139, 90, 60, 0.15);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(139, 90, 60, 0.2);
+  }
+  
+  .detailsFavoriteIcon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .notFound {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2rem;
+    color: var(--warm-brown);
+    text-align: center;
+    font-style: italic;
+    padding: 3rem;
+  }

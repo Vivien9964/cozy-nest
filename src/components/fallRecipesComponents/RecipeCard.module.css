@@ -1,0 +1,127 @@
+.recipeCard {
+    background: var(--white-overlay);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow:
+      0 8px 25px rgba(139, 90, 60, 0.08),
+      0 4px 12px rgba(160, 129, 108, 0.06);
+    border: 1px solid var(--white-border);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .recipeCard::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg,
+      var(--cream-light), var(--cream-medium), var(--cream-dark), var(--nude-light),
+      var(--nude-medium), var(--nude-dark), var(--brown-medium), var(--brown-dark));
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .recipeCard:hover::before {
+    opacity: 0.3;
+  }
+  
+  .recipeCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+      0 16px 40px rgba(139, 90, 60, 0.15),
+      0 8px 20px rgba(160, 129, 108, 0.1);
+  }
+  
+  .recipeTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--warm-brown);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+  .recipeImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius: 15px;
+  }
+  
+  .recipeCard:hover .recipeImage {
+    transform: scale(1.05);
+  }
+  
+  .prepTime {
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
+    color: var(--warm-brown);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .cardActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .viewRecipeLink {
+    font-family: 'Kalam', cursive;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, var(--button-brown) 0%, var(--button-brown-dark) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(205, 133, 63, 0.2);
+  }
+  
+  .viewRecipeLink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(205, 133, 63, 0.3);
+  }
+  
+  .favoriteButton {
+    background: rgba(139, 90, 60, 0.1);
+    border: 1px solid rgba(139, 90, 60, 0.2);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .favoriteButton:hover {
+    background: rgba(139, 90, 60, 0.15);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(139, 90, 60, 0.2);
+  }
+  
+  .favoriteIcon {
+    width: 22px;
+    height: 22px;
+  }
+  

@@ -6,6 +6,7 @@ import styles from "./MoodBoard.module.css";
 import ImageModal from "../../components/moodBoardComponents/ImageModal";
 
 const MoodBoard = () => {
+  
   const [mood, setMood] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);

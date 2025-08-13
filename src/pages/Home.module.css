@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fef7ed, #f1cca2);
+  }
+  
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+    color: #895541;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #774737;
+    max-width: 600px;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    margin-bottom: 2rem;
+  }
+
+  .contact {
+    margin-bottom: 1.5rem;
+  }
+  
+
+  .contactTitle {
+    font-family: 'Inter', sans-serif;
+    color: #826959;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #ecc79d;
+    color: #92400e;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .socialLink:hover {
+    background-color: #c99a80;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.1rem;
+    }
+  }

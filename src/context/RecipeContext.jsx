@@ -19,7 +19,7 @@ const RecipeProvider = ({ children }) => {
 
   }
 
-  // Save favorites into localStorage whenever the array changes
+  // Save favorites into localStorage whenever favorites array changes
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites))
   }, [favorites]);

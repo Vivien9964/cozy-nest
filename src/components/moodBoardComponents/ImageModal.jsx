@@ -3,8 +3,6 @@ import styles from "./ImageModal.module.css";
 
 const ImageModal = ({ image, onClose }) => {
 
-  console.log("Recieved Image", image);
-
   if (!image) return null;
 
   const handleBackdropClick = (e) => {

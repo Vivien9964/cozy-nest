@@ -1,12 +1,113 @@
-# React + Vite
+# Autumn Projects Collection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a collection of autumn-themed projects, 
+each created as a way to apply and improve my React skills.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## To run this project:
 
-## Expanding the ESLint configuration
+1. Clone this repository:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    git clone https://github.com/Vivien9964/cozy-nest
+
+    cd Cozy-nest
+
+2. Navigate to the project file:
+
+    cd cozy-nest
+
+3. Install dependencies:
+
+    npm install
+
+4. Start development server:
+
+    npm run dev
+
+5. Open the local URL provided in your terminal.
+
+
+## Projects Overview
+
+### 1. Autumn Bucket List - Tod-do List
+A simple to-do list to help you track your fall activities.
+
+Concepts practices:
+
+- State management with useState
+- Global state sharing with Context API
+- Controlled inputs
+- Editing, adding, and removing tasks
+- Marking tasks as done and deleting completed ones
+- Sorting tasks by priority
+- Saving to localStorage
+- Conditional rendering
+- Styling with CSS Modules
+
+Improvements in the future:
+
+- Add categories for each task and enable sorting by category.
+
+---
+
+### 2. Autumn MoodBoard
+You can create your personalized moodboard by choosing your current mood. 
+
+Concepts practiced: 
+
+- State management with useState
+- Conditional rendering
+- Implementing image modal component
+- Passing data between components via props
+- Styling with CSS Modules
+
+Improvements in the future: 
+
+- Connect the app to an API to fetch images from there. 
+- Enable user uploads.
+- Add like functionality.
+
+---
+
+### 3. Autumn Recipes
+A collection of fall recipes that you can try, and add to favorites later if you like!
+
+Concepts practiced: 
+- State management with useState
+- Global state sharing with Context API
+- Data handling from local JSON file
+- Dynamic routing and details page with useParams
+- Adding and removing favorites
+- Saving to localStorage
+
+Improvements in the future: 
+
+- Add sort by category functionality.
+- Connect to an API to fetch recipes.
+- Enable user recipe uploads.
+- Add like functionality.
+
+---
+
+### 4. Autumn CountDown
+A countdown timer tracking days until your chosen fall event.
+
+Concepts practiced: 
+- State management with useState
+- Saving to localStorage
+- Creating a custom countdown calculation function
+- Working with Date object
+- Conditional rendering
+
+## Technologies:
+- React (Vite)
+- JavaScript (ES6+)
+- CSS modlues
+
+## Credits:
+Created by Vivien - Inspired by autumn
+
+## Contact:
+Feel free to reach out via mecserikvivien2@gmail.com
+
+

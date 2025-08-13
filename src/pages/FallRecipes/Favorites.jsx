@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import recipes from "../../data/fallRecipes.json";
 import { RecipeContext } from "../../context/RecipeContext";
+import styles from "./Favorites.module.css";
 
 const Favorites = () => {
-
+  // Get favorites array from context
   const { favorites } = useContext(RecipeContext);
 
   // Filter recipes based on favorite recipe id's
@@ -12,26 +13,38 @@ const Favorites = () => {
     favorites.includes(recipe.id)
   );
 
-
   return (
-    <div>
-      <h2>Your Favorite Recipes</h2>
+    <main className={styles.favoritesContainer}>
+      <h2 className={styles.favoritesTitle}>Your Favorite Recipes</h2>
 
-      <button>
-        <Link to={"/recipes"}>Back to Recipes</Link>
+      <button className={styles.backButton}>
+        <Link to={"/recipes"} className={styles.backButtonLink}>
+          Back to Recipes
+        </Link>
       </button>
-      
-      <ul>
+
+      <ul className={styles.favoritesList}>
         {favoriteRecipes.map((recipe) => (
-          <li key={recipe.id}>
-            <h3>{recipe.title}</h3>
-            <img src={recipe.image} alt={recipe.title} height="40" width="40" />
-            <Link to={`/recipes/${recipe.id}`}>View Recipe</Link>
+          <li key={recipe.id} className={styles.favoriteItem}>
+            <img
+              src={recipe.image}
+              alt={recipe.title}
+              className={styles.favoriteItemImage}
+            />
+
+            <div className={styles.favoriteItemContent}>
+              <h3 className={styles.favoriteItemTitle}>{recipe.title}</h3>
+              <Link
+                to={`/recipes/${recipe.id}`}
+                className={styles.favoriteItemLink}
+              >
+                View Recipe
+              </Link>
+            </div>
           </li>
         ))}
       </ul>
-
-    </div>
+    </main>
   );
 };
 

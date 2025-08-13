@@ -1,12 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
+:root {
+
+  --modal-overlay: rgba(0, 0, 0, 0.8);
+  --modal-background: rgba(247, 243, 240, 0.95);
+  --modal-border: rgba(139, 90, 60, 0.2);
+  --modal-shadow: rgba(139, 90, 60, 0.15);
+  
+  --close-button-background: rgba(139, 90, 60, 0.1);
+  --close-button-border: rgba(139, 90, 60, 0.3);
+  --close-button-text: #8b5a3c;
+  --close-button-hover: rgba(139, 90, 60, 0.2);
+  
+  --caption-text: #8b5a3c;
+  
+  --image-shadow: rgba(139, 90, 60, 0.1);
+}
+
 .modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--modal-overlay);
   backdrop-filter: blur(5px);
   z-index: 1000;
   display: flex;
@@ -23,14 +40,14 @@
 
 .modalContent {
   position: relative;
-  background: rgba(247, 243, 240, 0.95);
+  background: var(--modal-background);
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(139, 90, 60, 0.2);
+  border: 2px solid var(--modal-border);
   border-radius: 20px;
   padding: 2rem;
   max-width: 90vw;
   max-height: 90vh;
-  box-shadow: 0 20px 40px rgba(139, 90, 60, 0.15);
+  box-shadow: 0 20px 40px var(--modal-shadow);
   animation: slideIn 0.3s ease;
 }
 
@@ -50,8 +67,8 @@
   position: absolute;
   top: .2rem;
   right: .2rem;
-  background: rgba(139, 90, 60, 0.1);
-  border: 2px solid rgba(139, 90, 60, 0.3);
+  background: var(--close-button-background);
+  border: 2px solid var(--close-button-border);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -59,13 +76,13 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: #8b5a3c;
+  color: var(--close-button-text);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .closeBtn:hover {
-  background: rgba(139, 90, 60, 0.2);
+  background: var(--close-button-hover);
   transform: scale(1.1);
 }
 
@@ -75,7 +92,7 @@
   width: auto;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(139, 90, 60, 0.1);
+  box-shadow: 0 10px 25px var(--image-shadow);
   display: block;
   margin: 0 auto 1rem;
 }
@@ -84,7 +101,7 @@
 .modalContent figcaption p {
   font-family: 'Crimson Text', serif;
   font-size: 1.1rem;
-  color: #8b5a3c;
+  color: var(--caption-text);
   font-style: italic;
   text-align: center;
   margin: 0;

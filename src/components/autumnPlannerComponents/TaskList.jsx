@@ -4,6 +4,7 @@ import TaskItem from "./TaskItem";
 import styles from "./TaskList.module.css";
 
 const TaskList = () => {
+
   const { tasks, deleteCompleted } = useContext(TasksContext);
   const [priorityFilter, setPriorityFilter] = useState("all");
 
@@ -40,13 +41,20 @@ const TaskList = () => {
                 <option value="low">Low</option>
               </select>
             </div>
-          </div>
+          </div>  
 
-          <ul className={styles.tasksList}>
+          {filteredTasks.length === 0 ? (
+            <p className={styles.emptyState}>No tasks found!</p>
+          ):(
+
+            <ul className={styles.tasksList}>
             {filteredTasks.map((task) => {
               return <TaskItem key={task.id} task={task} />;
             })}
           </ul>
+
+          )}
+         
         </div>
       )}
     </main>

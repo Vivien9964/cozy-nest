@@ -1,19 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import RecipeList from '../../components/fallRecipesComponents/RecipeList'
+import React from "react";
+import { Link } from "react-router-dom";
+import RecipeList from "../../components/fallRecipesComponents/RecipeList";
+import styles from "./FallRecipes.module.css";
 
 const FallRecipes = () => {
   return (
-    
-    <div>
-
-      <button><Link to={'/favorites'}>See Favorites</Link></button>
+    <main className={styles.fallRecipesContainer}>
+      <button className={styles.favoritesButton}>
+        <Link to={"/favorites"} className={styles.favoritesLink}>
+          See Favorites
+        </Link>
+      </button>
 
       <RecipeList />
+    </main>
+  );
+};
 
-
-    </div>
-  )
-}
-
-export default FallRecipes
+export default FallRecipes;

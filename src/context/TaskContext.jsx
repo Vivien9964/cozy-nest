@@ -2,69 +2,65 @@ import { createContext, useEffect, useState } from "react";
 
 export const TasksContext = createContext();
 
-
 const TaskProvider = ({ children }) => {
+  // Lazy initialization of state from localStorage
+  const [tasks, setTasks] = useState(() => {
+    const storedTasks = localStorage.getItem("autumn_tasks");
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  });
 
+  // Load tasks from localStorage
+  useEffect(() => {
+    localStorage.setItem("autumn_tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
-    // Lazy initialization of state from localStorage 
-    // -> initial state is read from localStorage once when the component mounts
-    const [ tasks, setTasks ] = useState(() => {
-        const storedTasks = localStorage.getItem("autumn_tasks");
-        return storedTasks ? JSON.parse(storedTasks) : [];
-    });
+  // Function to add a new task to tasks array
+  const addTask = (task) => {
+    setTasks([...tasks, task]);
+  };
 
-    // Load tasks from localStorage
-    useEffect(() => {
-        localStorage.setItem("autumn_tasks", JSON.stringify(tasks))
-    }, [tasks]);
+  // Function to delete a task based on it's id
+  const deleteTask = (id) => {
+    const updatedTasks = tasks.filter((task) => task.id !== id);
+    setTasks(updatedTasks);
+  };
 
-    const addTask = (task) => {
-        setTasks([...tasks, task]);
-    };
+  // Function to toggle task status
+  const toggleComplete = (id) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === id ? { ...task, completed: !task.completed } : task
+    );
 
-    const deleteTask = (id) => {
-        const updatedTasks = tasks.filter((task) => task.id !== id);
-        setTasks(updatedTasks);
-    };
+    setTasks(updatedTasks);
+  };
 
-    const toggleComplete = (id) => {
+  // Function to delete all completed tasks
+  const deleteCompleted = () => {
+    const updatedTasks = tasks.filter((task) => task.completed === false);
+    setTasks(updatedTasks);
+  };
 
-        const updatedTasks = tasks.map((task) => 
-            task.id === id ? { ...task, completed: !task.completed } : task
-        );
-        
-        setTasks(updatedTasks);
-    };
+  // Function to edit task based on it's id
+  const editTask = (id, updatedTask) => {
+    setTasks(
+      tasks.map((task) => (task.id === id ? { ...task, ...updatedTask } : task))
+    );
+  };
 
+  const contextValue = {
+    tasks,
+    addTask,
+    deleteTask,
+    toggleComplete,
+    deleteCompleted,
+    editTask,
+  };
 
-    const deleteCompleted = () => {
-        const updatedTasks = tasks.filter((task) => task.completed === false);
-        setTasks(updatedTasks);
-    };
+  return (
+    <TasksContext.Provider value={contextValue}>
+      {children}
+    </TasksContext.Provider>
+  );
+};
 
-
-    const editTask = (id, updatedTask) => {
-        setTasks(tasks.map((task) => 
-            task.id === id ? { ...task, ...updatedTask } : task
-        ));
-    };
-
-    
-    const contextValue = {
-        tasks,
-        addTask,
-        deleteTask, 
-        toggleComplete,
-        deleteCompleted,
-        editTask,
-    }
-
-
-
-
-  return <TasksContext.Provider value={contextValue} >
-    { children }
-  </TasksContext.Provider>
-}
-
-export default TaskProvider
+export default TaskProvider;

@@ -2,8 +2,6 @@ import React from "react";
 import ImageCard from "./ImageCard";
 import styles from "./ImageGrid.module.css";
 
-// Note: Always make sure when you use map to add a unique key to each item!!
-
 const ImageGrid = ({ images, onImageClick }) => {
   return (
     <ul className={styles.imageGrid}>

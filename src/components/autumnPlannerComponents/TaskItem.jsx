@@ -1,15 +1,18 @@
 import React, { useContext, useState } from "react";
 import { TasksContext } from "../../context/TaskContext";
-import styles from './TaskItem.module.css';
+import styles from "./TaskItem.module.css";
 
 const TaskItem = ({ task }) => {
+  // Get functions from context
   const { deleteTask, toggleComplete, editTask } = useContext(TasksContext);
 
+  // Local states for this component
   const [isEditing, setIsEditing] = useState(false);
   const [editedTask, setEditedTask] = useState(task.todo);
   const [editedNotes, setEditedNotes] = useState(task.notes);
   const [editedPriority, setEditedPriority] = useState(task.importance);
 
+  // Function to update edited task
   const handleEdit = () => {
     const updatedTask = {
       todo: editedTask.trim(),
@@ -21,6 +24,7 @@ const TaskItem = ({ task }) => {
     setIsEditing(false);
   };
 
+  // Function to cancel edit mode
   const handleCancel = () => {
     setEditedTask(task.todo);
     setEditedNotes(task.notes);
@@ -29,7 +33,9 @@ const TaskItem = ({ task }) => {
   };
 
   return (
-    <li className={`${styles.taskItem} ${task.completed ? styles.completed : ''}`}>
+    <li
+      className={`${styles.taskItem} ${task.completed ? styles.completed : ""}`}
+    >
       <div className={styles.taskContent}>
         <div className={styles.checkboxContainer}>
           <input
@@ -70,35 +76,31 @@ const TaskItem = ({ task }) => {
               </select>
 
               <div className={styles.editButtons}>
-                <button 
-                  className={styles.saveButton}
-                  onClick={handleEdit}
-                >
+                <button className={styles.saveButton} onClick={handleEdit}>
                   Save
                 </button>
-                <button 
-                  className={styles.cancelButton}
-                  onClick={handleCancel}
-                >
+                <button className={styles.cancelButton} onClick={handleCancel}>
                   Cancel
                 </button>
               </div>
             </div>
           ) : (
             <div>
-              <h3 
+              <h3
                 className={styles.taskTitle}
                 onClick={() => setIsEditing(true)}
               >
                 {task.todo}
               </h3>
-              
-              {task.notes && (
-                <p className={styles.taskNotes}>{task.notes}</p>
-              )}
-              
+
+              {task.notes && <p className={styles.taskNotes}>{task.notes}</p>}
+
               <div className={styles.taskMeta}>
-                <span className={`${styles.priorityBadge} ${styles[task.importance]}`}>
+                <span
+                  className={`${styles.priorityBadge} ${
+                    styles[task.importance]
+                  }`}
+                >
                   {task.importance} priority
                 </span>
                 <small className={styles.taskDate}>Added: {task.date}</small>
@@ -107,7 +109,7 @@ const TaskItem = ({ task }) => {
           )}
         </div>
 
-        <button 
+        <button
           className={styles.deleteButton}
           onClick={() => deleteTask(task.id)}
           aria-label="Delete task"

@@ -1,0 +1,50 @@
+.eventListContainer {
+    background: var(--white-overlay);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 
+      0 12px 40px rgba(139, 90, 60, 0.08),
+      0 6px 20px rgba(160, 129, 108, 0.05);
+    border: 1px solid var(--white-border);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .eventListContainer::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg,
+      var(--cream-light), var(--cream-medium), var(--cream-dark), var(--nude-light),
+      var(--nude-medium), var(--nude-dark), var(--brown-medium), var(--brown-dark));
+    border-radius: 27px;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  
+  .emptyState {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: rgba(139, 90, 60, 0.7);
+    font-family: 'Crimson Text', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  
+  .emptyState::before {
+    content: '🍁';
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+  }
+  
+  .eventsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }

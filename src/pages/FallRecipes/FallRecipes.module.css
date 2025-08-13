@@ -1,0 +1,61 @@
+:root {
+    --warm-brown: #8b5a3c;
+    --light-brown: #a0816c;
+    --cream-light: #f4e8d0;
+    --cream-medium: #e8d5c4;
+    --cream-dark: #dcc2ae;
+    --nude-light: #d0ae98;
+    --nude-medium: #c49b82;
+    --nude-dark: #b8886c;
+    --brown-medium: #ac7556;
+    --brown-dark: #a06240;
+    --golden-brown: #cd853f;
+    --button-brown: #904218b8;
+    --button-brown-dark: #60492bb7;
+    --white-overlay: rgba(255, 255, 255, 0.8);
+    --white-light: rgba(255, 255, 255, 0.9);
+    --white-border: rgba(255, 255, 255, 0.4);
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Kalam:wght@300;400;700&family=Playfair+Display:wght@400;500;600&display=swap');
+  
+  .fallRecipesContainer {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, 
+      var(--cream-light) 0%, 
+      var(--cream-medium) 50%, 
+      var(--cream-dark) 100%);
+    min-height: 100vh;
+  }
+  
+  .favoritesButton {
+    background: var(--white-overlay);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 
+      0 8px 25px rgba(139, 90, 60, 0.08),
+      0 4px 12px rgba(160, 129, 108, 0.06);
+    border: 1px solid var(--white-border);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .favoritesButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 12px 30px rgba(139, 90, 60, 0.12),
+      0 6px 15px rgba(160, 129, 108, 0.08);
+  }
+  
+  .favoritesLink {
+    font-family: 'Kalam', cursive;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--warm-brown);
+    text-decoration: none;
+  }
+  
