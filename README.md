@@ -111,7 +111,7 @@ Created by Vivien - Inspired by autumn
 
 ## Contact:
 Feel free to reach out: 
-    Email: mecserikvivien2@gmail.com
-    LinkedIn: https://www.linkedin.com/in/vivien-mecerik-1260171b1/
+- Email: mecserikvivien2@gmail.com
+- LinkedIn: https://www.linkedin.com/in/vivien-mecerik-1260171b1/
 
 
