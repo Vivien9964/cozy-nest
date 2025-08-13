@@ -10,7 +10,7 @@ each created as a way to apply and improve my React skills.
 
     git clone https://github.com/Vivien9964/cozy-nest
 
-    cd Cozy-nest
+    cd CozyNest
 
 2. Navigate to the project file:
 
