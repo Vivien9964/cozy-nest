@@ -8,7 +8,7 @@ each created as a way to apply and improve my React skills.
 
 1. Clone this repository:
 
-    git clone git@github.com:Vivien9964/cozy-nest.git
+    git clone https://github.com/Vivien9964/cozy-nest.git
 
 2. Navigate to the project file:
 
