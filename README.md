@@ -35,7 +35,7 @@ each created as a way to apply and improve my React skills.
 
 ## Projects Overview
 
-### 1. Autumn Bucket List - Tod-do List
+### 1. Autumn Bucket List - To-do List
 A simple to-do list to help you track your fall activities.
 
 Concepts practiced:
